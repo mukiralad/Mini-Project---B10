@@ -423,9 +423,9 @@ void assess(){
    
     printf("\n\n\n      NOTE:\n-->THESE RESULTS ARE JUST INFORMATIVE IN NATURE<--    \n\n");
    
-    char p[13][50]={"Difficulty in breathing","Chest Pain","Loss of Speech","Fever","Dry Cough","Tiredness","Aches","Sore Throat","Diarrhoea","Conjuctivitis","Headache","Loss of taste or smell","Rash on skin"};
+   char p[13][50]={"Difficulty in breathing","Chest Pain","Loss of Speech","Fever","Dry Cough","Tiredness","Aches","Sore Throat","Diarrhoea","Conjuctivitis","Headache","Loss of taste or smell","Rash on skin"};
     printf("Are you experiencing any of the following symptoms?\n");
-     printf("Enter '1' for YES and '0' for NO\n");
+     printf("Enter 1 for yes and 0 for no\n");
     int i=0,j=0,x,l,k=0,r;
     char s[13][50];
     for(i=0;i<13;i++){
@@ -435,7 +435,7 @@ void assess(){
         scanf("%d",&x);
 
         if(x==1){
-            strncpy(s[k],p[i],strlen(p[i]));
+            strcpy(s[k],p[i]);
             k++;
         }
    
@@ -452,13 +452,13 @@ void assess(){
             printf("\nGo for an RT-PCR Test ASAP\n");
          }
 
-         else if(4<=(k+1)<7){
+         else if(4<=k+1 && k+1<7){
             printf("Medium Risk of Infection\n");
             printf("\n Stay indoors and isolate yourself\n");
          }
 
          else{
-            printf("Based on the symptoms you shared with us, it's unlikely you have a COVID 19 infection.\n\nHowever, you must maintain social distancing and regularly wash your hands and sanitize them. #Stayhome. #Staysafe");
+            printf("Based on the symptoms you shared with us, it's unlikely you have a COVID 19 infection.\n\nHowever, you must maintain social distancing and regularly wash your hands and sanitize them. \n#STAYHOME. #STAYSAFE");
          }
 
         //printf("%s\n",s[i]);
