@@ -1,2 +1,2 @@
 # Mini-Project---B10
-Vasavi College of Engineering, Mini Project work using C language.
+Vasavi College of Engineering, Mini Project Course Work using C language.
